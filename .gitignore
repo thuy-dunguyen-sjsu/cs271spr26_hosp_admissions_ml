@@ -3,6 +3,8 @@
 __pycache__/
 datasets/
 datasets_encoded/
-get-pip.py
 params/
 predictions/
+hyperp_opt/__pycache__/
+xgb_test.py
+

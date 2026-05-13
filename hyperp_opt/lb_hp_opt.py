@@ -7,6 +7,7 @@ import shap
 import warnings
 import json
 import logging
+import os
 
 
 logger = logging.getLogger("demo")
@@ -78,6 +79,12 @@ def opt_lb(filename='dataset2', iterations=None, train_size=None):
 
     logger.info("Final Parameters: {}".format(json.dumps(param_final, indent=4)))
     mess = "{0}\n\n{1}\n\n".format(json.dumps(param_list, indent=4), json.dumps(param_final, indent=4))
+
+    try:
+        os.mkdir("./params")
+    except OSError as e:
+        pass
+
     with open("params/" + filename + "_opt_lb.txt", "w") as text_file:
         text_file.write(mess)
 

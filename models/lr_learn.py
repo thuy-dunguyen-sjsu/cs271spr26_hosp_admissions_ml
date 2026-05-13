@@ -6,6 +6,7 @@ from data_encoder import format_data
 import shap
 import warnings
 import logging
+import os
 
 logger = logging.getLogger("demo")
 warnings.filterwarnings('ignore')
@@ -72,6 +73,12 @@ def train_lr(filename='dataset2', optimize=True, random_state=0, params=None):
     print('Accuracy of the lr model is:', accuracy*100)
     mess = "{0}'{1}  >>> RS {2}; Accuracy: {3}; F1: {4}\n".format(p, best_params, random_state, accuracy, f1)
     logger.info(mess)
+
+    try:
+        os.mkdir("./params")
+    except OSError as e:
+        pass
+
     with open("params/" + filename + "_params_lb.txt", "a") as text_file:
         text_file.write(mess)
 

@@ -2,6 +2,7 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -23,6 +24,11 @@ def data_enc(filename):
 
     encoded = np.concatenate((encoded_X, y), axis=1)
     encoded = np.concatenate(([labels], encoded), axis=0)
+
+    try:
+        os.mkdir("./datasets_encoded")
+    except OSError as e:
+        pass
 
     np.savetxt("datasets_encoded/" + filename + "_encode.csv", encoded, delimiter=",", fmt='%s')
     logger.info(filename + " encoded and saved at" + "datasets_encoded/" + filename + "_encode.csv")
