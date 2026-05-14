@@ -66,5 +66,9 @@ def test(noise):
 
     logger.info("**********************************Complete Noise Test*****************************")
 
-for n in noise:
-    test(n)
+def run():
+    for n in noise:
+        test(n)
+
+if __name__ == "__main__":
+    run()

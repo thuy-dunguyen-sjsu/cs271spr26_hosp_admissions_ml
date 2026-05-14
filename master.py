@@ -1,13 +1,13 @@
 import sys
 sys.path.insert(0, "./tests")
 from demo import subset, rand_opt
-import latency
-import noise
+from latency import run as run_l
+from noise import run as run_n
 
 
-latency
+run_l()
 
-noise
+run_n()
 
 subset()
 

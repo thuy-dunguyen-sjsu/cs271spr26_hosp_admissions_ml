@@ -26,10 +26,12 @@ def parse():
 
 
 def subset():
+    tq.write("******************************DEMO SUBSET OPTIMIZER INITIATED**************************************")
     logger.info("******************************DEMO SUBSET OPTIMIZER INITIATED**************************************")
     filename = "dataset3"
     iterations = 10
     train_size = 0.01
+    tq.write("Filename:{}, iterations:{}, train_size:{}".format(filename, iterations, train_size))
     logger.info("Filename:{}, iterations:{}, train_size:{}".format(filename, iterations, train_size))
 
     # data_enc(filename)
@@ -43,9 +45,11 @@ def subset():
 
 
 def rand_opt():
+    tq.write("******************************DEMO RANDOM OPTIMIZER INITIATED**************************************")
     logger.info("******************************DEMO RANDOM OPTIMIZER INITIATED**************************************")
     filename = "dataset3"
     random_state = 42
+    tq.write("Filename:{}, random_state:{}".format(filename, random_state))
     logger.info("Filename:{}, random_state:{}".format(filename, random_state))
     for m in ["lr", "lb", "xgb"]:
         tq.write(m)
