@@ -408,3 +408,400 @@ O'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': Tru
 
 Begin training LinearBoost model on dataset
 Beginning LinearBoost randomized hyperparameter optimization
+******************************DEMO RANDOM OPTIMIZER INITIATED**************************************
+Filename:dataset3, random_state:42
+Begin training LogisticRegression model on dataset
+Beginning LogisticRegression randomized hyperparameter optimization
+******************************DEMO RANDOM OPTIMIZER INITIATED**************************************
+Filename:dataset3, random_state:42
+Begin training LogisticRegression model on dataset
+Beginning LogisticRegression randomized hyperparameter optimization
+******************************DEMO RANDOM OPTIMIZER INITIATED**************************************
+Filename:dataset3, random_state:42
+Begin training LogisticRegression model on dataset
+Beginning LogisticRegression randomized hyperparameter optimization
+LogisticRegression Hyperparameter optimization complete
+O'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> RS 42; Accuracy: 0.856734693877551; F1: 0.7576970868424686
+
+Begin training LinearBoost model on dataset
+Beginning LinearBoost randomized hyperparameter optimization
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7387755102040816; F1: 0.5949367088607594
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7551020408163265; F1: 0.5833333333333334
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7571428571428571; F1: 0.617363344051447
+
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7142857142857143; F1: 0.5454545454545454
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.710204081632653; F1: 0.538961038961039
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.710204081632653; F1: 0.5234899328859061
+
+Iter:3'{'solver': 'newton-cg', 'max_iter': 50, 'l1_ratio': 0, 'fit_intercept': False, 'C': 0.003981071705534973}  >>> Accuracy: 0.7; F1: 0.4878048780487805
+
+Iter:4'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7224489795918367; F1: 0.577639751552795
+
+Iter:5'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7204081632653061; F1: 0.5678233438485805
+
+Iter:6'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7244897959183674; F1: 0.5714285714285714
+
+Iter:7'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7571428571428571; F1: 0.6426426426426426
+
+Iter:8'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.746938775510204; F1: 0.6172839506172839
+
+Iter:9'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7551020408163265; F1: 0.6103896103896104
+
+Final Parameters: {
+    "l1_ratio": 0.9,
+    "fit_intercept": true,
+    "C": 5.679014207492302,
+    "solver": "liblinear",
+    "max_iter": 95
+}
+Begin training LogisticRegression model on dataset
+Modeling with preexisting params
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 10000.0}  >>> Accuracy: 0.7857142857142857; F1: 0.670846394984326
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.7285714285714285; F1: 0.6006006006006006
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.7938775510204081; F1: 0.6752411575562701
+
+Iter:3'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Accuracy: 0.8285714285714286; F1: 0.7123287671232876
+
+Iter:4'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7857142857142857; F1: 0.6181818181818182
+
+Iter:5'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.773469387755102; F1: 0.6407766990291263
+
+Iter:6'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7591836734693878; F1: 0.5902777777777778
+
+Iter:7'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7877551020408163; F1: 0.6285714285714286
+
+Iter:8'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.8040816326530612; F1: 0.7037037037037037
+
+Iter:9'{'solver': 'liblinear', 'max_iter': 50, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 251.18864315095823}  >>> Accuracy: 0.763265306122449; F1: 0.6158940397350994
+
+Final Parameters: {
+    "l1_ratio": 1.0,
+    "fit_intercept": true,
+    "C": 1103.6302439827837,
+    "solver": "liblinear",
+    "max_iter": 23
+}
+Begin training LogisticRegression model on dataset
+Modeling with preexisting params
+P'{'l1_ratio': 1.0, 'fit_intercept': True, 'C': 1103.6302439827837, 'solver': 'liblinear', 'max_iter': 23}  >>> RS 42; Accuracy: 0.8566530612244898; F1: 0.7577931034482759
+
+Beginning linearboost hyperparameter optimization on subset
+Iter:0'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7877551020408163; F1: 0.6285714285714286
+
+Iter:1'{'shrinkage': 0.8, 'n_estimators': 50, 'learning_rate': 0.4, 'early_stopping': True}  >>> Accuracy: 0.7387755102040816; F1: 0.5223880597014925
+
+Iter:2'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7673469387755102; F1: 0.5648854961832062
+
+Iter:3'{'shrinkage': 1, 'n_estimators': 200, 'learning_rate': 0.1, 'early_stopping': False}  >>> Accuracy: 0.7714285714285715; F1: 0.6241610738255033
+
+Iter:4'{'shrinkage': 0.8, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7857142857142857; F1: 0.6391752577319587
+
+Iter:5'{'shrinkage': 0.8, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.753061224489796; F1: 0.6084142394822006
+
+Iter:6'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.8040816326530612; F1: 0.6546762589928058
+
+Iter:7'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7775510204081633; F1: 0.6175438596491228
+
+Iter:8'{'shrinkage': 1, 'n_estimators': 200, 'learning_rate': 0.1, 'early_stopping': False}  >>> Accuracy: 0.7775510204081633; F1: 0.5977859778597786
+
+Iter:9'{'shrinkage': 1, 'n_estimators': 200, 'learning_rate': 0.1, 'early_stopping': False}  >>> Accuracy: 0.7775510204081633; F1: 0.6279863481228669
+
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7714285714285715; F1: 0.6137931034482759
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Accuracy: 0.7959183673469388; F1: 0.673202614379085
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.7673469387755102; F1: 0.632258064516129
+
+Iter:3'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.7306122448979592; F1: 0.5875
+
+Iter:4'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 251.18864315095823}  >>> Accuracy: 0.7510204081632653; F1: 0.5960264900662252
+
+Iter:5'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Accuracy: 0.7918367346938775; F1: 0.6730769230769231
+
+Iter:6'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Accuracy: 0.7795918367346939; F1: 0.64
+
+Iter:7'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 10000.0}  >>> Accuracy: 0.7816326530612245; F1: 0.6468646864686468
+
+Iter:8'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7877551020408163; F1: 0.6338028169014085
+
+Iter:9'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7938775510204081; F1: 0.6644518272425249
+
+Final Parameters: {
+    "l1_ratio": 1.0,
+    "fit_intercept": false,
+    "C": 1079.1423370121686,
+    "solver": "liblinear",
+    "max_iter": 10
+}
+Begin training LogisticRegression model on dataset
+Modeling with preexisting params
+P'{'l1_ratio': 1.0, 'fit_intercept': False, 'C': 1079.1423370121686, 'solver': 'liblinear', 'max_iter': 10}  >>> RS 42; Accuracy: 0.8586122448979592; F1: 0.760177236222653
+
+Beginning linearboost hyperparameter optimization on subset
+Iter:0'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.8020408163265306; F1: 0.6819672131147541
+
+Iter:1'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.8163265306122449; F1: 0.6715328467153284
+
+Iter:2'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.763265306122449; F1: 0.5857142857142857
+
+Iter:3'{'shrinkage': 0.9, 'n_estimators': 50, 'learning_rate': 0.1, 'early_stopping': True}  >>> Accuracy: 0.7857142857142857; F1: 0.6645367412140575
+
+Iter:4'{'shrinkage': 0.9, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7653061224489796; F1: 0.6229508196721312
+
+Iter:5'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.8142857142857143; F1: 0.6996699669966997
+
+Iter:6'{'shrinkage': 0.9, 'n_estimators': 15, 'learning_rate': 0.1, 'early_stopping': True}  >>> Accuracy: 0.8020408163265306; F1: 0.662020905923345
+
+Iter:7'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7938775510204081; F1: 0.6552901023890785
+
+Iter:8'{'shrinkage': 0.9, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7551020408163265; F1: 0.6026490066225165
+
+
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.7551020408163265; F1: 0.6078431372549019
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7673469387755102; F1: 0.625
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7918367346938775; F1: 0.6730769230769231
+
+Iter:3'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 10000.0}  >>> Accuracy: 0.726530612244898; F1: 0.593939393939394
+
+Iter:4'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.753061224489796; F1: 0.6109324758842444
+
+Iter:5'{'solver': 'liblinear', 'max_iter': 50, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 10000.0}  >>> Accuracy: 0.7428571428571429; F1: 0.6158536585365854
+
+Iter:6'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Accuracy: 0.7836734693877551; F1: 0.6513157894736842
+
+Iter:7'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Accuracy: 0.746938775510204; F1: 0.5921052631578947
+
+Iter:8'{'solver': 'liblinear', 'max_iter': 50, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 10000.0}  >>> Accuracy: 0.7163265306122449; F1: 0.5587301587301587
+
+Iter:9'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Accuracy: 0.7918367346938775; F1: 0.66
+
+Final Parameters: {
+    "l1_ratio": 1.0,
+    "fit_intercept": true,
+    "C": 3077.880422323208,
+    "solver": "liblinear",
+    "max_iter": 45
+}
+Begin training LogisticRegression model on dataset
+Modeling with preexisting params
+P'{'l1_ratio': 1.0, 'fit_intercept': True, 'C': 3077.880422323208, 'solver': 'liblinear', 'max_iter': 45}  >>> RS 42; Accuracy: 0.8562448979591837; F1: 0.756935817805383
+
+Beginning linearboost hyperparameter optimization on subset
+Iter:0'{'shrinkage': 0.9, 'n_estimators': 15, 'learning_rate': 0.1, 'early_stopping': True}  >>> Accuracy: 0.7816326530612245; F1: 0.6421404682274248
+
+Iter:1'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.8142857142857143; F1: 0.6738351254480287
+
+Iter:2'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7653061224489796; F1: 0.6101694915254238
+
+Iter:3'{'shrinkage': 0.9, 'n_estimators': 15, 'learning_rate': 0.1, 'early_stopping': True}  >>> Accuracy: 0.8040816326530612; F1: 0.6712328767123288
+
+Iter:4'{'shrinkage': 0.8, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7918367346938775; F1: 0.66
+
+Iter:5'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7775510204081633; F1: 0.6093189964157706
+
+Iter:6'{'shrinkage': 1, 'n_estimators': 200, 'learning_rate': 0.1, 'early_stopping': False}  >>> Accuracy: 0.7775510204081633; F1: 0.5947955390334573
+
+Iter:7'{'shrinkage': 0.9, 'n_estimators': 50, 'learning_rate': 0.1, 'early_stopping': True}  >>> Accuracy: 0.7918367346938775; F1: 0.6277372262773723
+
+Iter:8'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7836734693877551; F1: 0.5954198473282443
+
+Iter:9'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Accuracy: 0.7836734693877551; F1: 0.624113475177305
+
+Final Parameters: {
+    "n_estimators": 83,
+    "learning_rate": 0.046000000000000006,
+    "early_stopping": false,
+    "shrinkage": 0.9200000000000002
+}
+Begin training LinearBoost model on dataset
+Modeling with preexisting params
+P'{'n_estimators': 83, 'learning_rate': 0.046000000000000006, 'early_stopping': False, 'shrinkage': 0.9200000000000002}  >>> RS 42; Accuracy: 0.8262857142857143; F1: 0.7176220806794055
+
+Beginning XGBoost hyperparameter optimization on subset
+Iter:0'{'objective': 'binary:logistic', 'max_depth': 6, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 1.0}  >>> Accuracy: 0.8346938775510204; F1: 0.7011070110701108
+
+Iter:1'{'objective': 'binary:logistic', 'max_depth': 15, 'eval_metric': 'rmse', 'eta': 0.3, 'colsample_bytree': 0.6}  >>> Accuracy: 0.7918367346938775; F1: 0.6357142857142857
+
+Iter:2'{'objective': 'binary:logistic', 'max_depth': 10, 'eval_metric': 'auc', 'eta': 0.7, 'colsample_bytree': 0.8}  >>> Accuracy: 0.8; F1: 0.6797385620915033
+
+Iter:3'{'objective': 'reg:squarederror', 'max_depth': 3, 'eval_metric': 'auc', 'eta': 0.3, 'colsample_bytree': 0.3}  >>> Accuracy: 0.8081632653061225; F1: 0.6642857142857143
+
+Iter:4'{'objective': 'binary:logistic', 'max_depth': 6, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 1.0}  >>> Accuracy: 0.8448979591836735; F1: 0.7548387096774194
+
+Iter:5'{'objective': 'binary:logistic', 'max_depth': 3, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 0.1}  >>> Accuracy: 0.8285714285714286; F1: 0.7103448275862069
+
+Iter:6'{'objective': 'reg:squarederror', 'max_depth': 3, 'eval_metric': 'auc', 'eta': 0.1, 'colsample_bytree': 1.0}  >>> Accuracy: 0.8408163265306122; F1: 0.7346938775510204
+
+Iter:7'{'objective': 'reg:squarederror', 'max_depth': 3, 'eval_metric': 'auc', 'eta': 0.1, 'colsample_bytree': 1.0}  >>> Accuracy: 0.8285714285714286; F1: 0.7
+
+Iter:8'{'objective': 'binary:logistic', 'max_depth': 15, 'eval_metric': 'rmse', 'eta': 0.3, 'colsample_bytree': 0.6}  >>> Accuracy: 0.7938775510204081; F1: 0.6599326599326599
+
+Iter:9'{'objective': 'binary:logistic', 'max_depth': 3, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 0.1}  >>> Accuracy: 0.8204081632653061; F1: 0.6691729323308271
+
+Final Parameters: {
+    "eta": 0.22000000000000006,
+    "max_depth": 6,
+    "colsample_bytree": 0.65,
+    "eval_metric": "rmse",
+    "objective": "binary:logistic"
+}
+Begin training XGBoost model on dataset
+Modeling with preexisting params
+P'{'eta': 0.22000000000000006, 'max_depth': 6, 'colsample_bytree': 0.65, 'eval_metric': 'rmse', 'objective': 'binary:logistic'}  >>> RS 42; Accuracy: 0.8625306122448979; F1: 0.7681718061674009
+
+*******************************DEMO COMPLETE*************************************************
+
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 10000.0}  >>> Score: 0.6836518046709129
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 10000.0}  >>> Score: 0.6540322580645161
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Score: 0.6659498207885305
+
+Iter:3'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Score: 0.598565146956723
+
+Iter:4'{'solver': 'liblinear', 'max_iter': 100, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 10000.0}  >>> Score: 0.6132530120481927
+
+Iter:5'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Score: 0.6964835369834903
+
+Iter:6'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Score: 0.6046319272125724
+
+Iter:7'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Score: 0.6824179336163996
+
+Iter:8'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Score: 0.6789202137460844
+
+Iter:9'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Score: 0.6397225556889423
+
+Final Parameters with latency 99.948661s: {
+    "l1_ratio": 1.0,
+    "fit_intercept": true,
+    "C": 3077.880422323209,
+    "solver": "liblinear",
+    "max_iter": 28
+}
+Begin training LogisticRegression model on dataset
+Modeling with preexisting params
+******************************DEMO SUBSET OPTIMIZER INITIATED**************************************
+Filename:dataset3, iterations:10, train_size:0.01
+Beginning LogisticRegression hyperparameter optimization on subset
+Iter:0'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Score: 0.571548
+
+Iter:1'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Score: 0.685185
+
+Iter:2'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}  >>> Score: 0.632258
+
+Iter:3'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Score: 0.642993
+
+Iter:4'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 0.15848931924611143}  >>> Score: 0.611387
+
+Iter:5'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 10000.0}  >>> Score: 0.630185
+
+Iter:6'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 6.309573444801943}  >>> Score: 0.673826
+
+Iter:7'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 251.18864315095823}  >>> Score: 0.656220
+
+Iter:8'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': True, 'C': 251.18864315095823}  >>> Score: 0.653333
+
+Iter:9'{'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 251.18864315095823}  >>> Score: 0.692857
+
+Final Parameters with latency 97.224453s: {
+    "l1_ratio": 1.0,
+    "fit_intercept": false,
+    "C": 1103.0151355702285,
+    "solver": "liblinear",
+    "max_iter": 10
+}
+Begin training LogisticRegression model on dataset
+Modeling with preexisting params
+P'{'l1_ratio': 1.0, 'fit_intercept': False, 'C': 1103.0151355702285, 'solver': 'liblinear', 'max_iter': 10}  >>> RS 42; Accuracy: 0.858612; F1: 0.760244, latency: 3.460435s
+
+Beginning linearboost hyperparameter optimization on subset
+Iter:0'{'shrinkage': 0.8, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.650109
+
+Iter:1'{'shrinkage': 0.8, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.641614
+
+Iter:2'{'shrinkage': 1, 'n_estimators': 200, 'learning_rate': 0.1, 'early_stopping': False}  >>> Score: 0.604136
+
+Iter:3'{'shrinkage': 0.9, 'n_estimators': 50, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.576109
+
+Iter:4'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.684478
+
+Iter:5'{'shrinkage': 1, 'n_estimators': 200, 'learning_rate': 0.1, 'early_stopping': True}  >>> Score: 0.674002
+
+Iter:6'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.545392
+
+Iter:7'{'shrinkage': 1, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.594633
+
+Iter:8'{'shrinkage': 0.9, 'n_estimators': 100, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.641758
+
+Iter:9'{'shrinkage': 0.9, 'n_estimators': 10, 'learning_rate': 0.01, 'early_stopping': False}  >>> Score: 0.560992
+
+Final Parameters with latency 136.988966s: {
+    "n_estimators": 96,
+    "learning_rate": 0.028000000000000004,
+    "early_stopping": false,
+    "shrinkage": 0.9200000000000002
+}
+Begin training LinearBoost model on dataset
+Modeling with preexisting params
+P'{'n_estimators': 96, 'learning_rate': 0.028000000000000004, 'early_stopping': False, 'shrinkage': 0.9200000000000002}  >>> RS 42; Accuracy: 0.814449; F1: 0.699219, latency: 26.019209s
+
+Beginning XGBoost hyperparameter optimization on subset
+Iter:0'{'objective': 'binary:logistic', 'max_depth': 15, 'eval_metric': 'auc', 'eta': 0.7, 'colsample_bytree': 0.6}  >>> Score: 0.697074
+
+Iter:1'{'objective': 'reg:squarederror', 'max_depth': 3, 'eval_metric': 'auc', 'eta': 0.3, 'colsample_bytree': 0.3}  >>> Score: 0.709934
+
+Iter:2'{'objective': 'reg:squarederror', 'max_depth': 10, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 0.6}  >>> Score: 0.669307
+
+Iter:3'{'objective': 'binary:logistic', 'max_depth': 6, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 1.0}  >>> Score: 0.725140
+
+Iter:4'{'objective': 'binary:logistic', 'max_depth': 15, 'eval_metric': 'rmse', 'eta': 0.3, 'colsample_bytree': 0.6}  >>> Score: 0.695455
+
+Iter:5'{'objective': 'binary:logistic', 'max_depth': 3, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 0.1}  >>> Score: 0.716484
+
+Iter:6'{'objective': 'reg:squarederror', 'max_depth': 8, 'eval_metric': 'rmse', 'eta': 0.3, 'colsample_bytree': 0.3}  >>> Score: 0.648291
+
+Iter:7'{'objective': 'reg:squarederror', 'max_depth': 3, 'eval_metric': 'auc', 'eta': 0.1, 'colsample_bytree': 1.0}  >>> Score: 0.714103
+
+Iter:8'{'objective': 'binary:logistic', 'max_depth': 3, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 0.1}  >>> Score: 0.599609
+
+Iter:9'{'objective': 'binary:logistic', 'max_depth': 15, 'eval_metric': 'auc', 'eta': 0.7, 'colsample_bytree': 0.6}  >>> Score: 0.664368
+
+Final Parameters with latency 168.212577s: {
+    "eta": 0.2800000000000001,
+    "max_depth": 8,
+    "colsample_bytree": 0.5199999999999999,
+    "eval_metric": "rmse",
+    "objective": "binary:logistic"
+}
+Begin training XGBoost model on dataset
+Modeling with preexisting params
+P'{'eta': 0.2800000000000001, 'max_depth': 8, 'colsample_bytree': 0.5199999999999999, 'eval_metric': 'rmse', 'objective': 'binary:logistic'}  >>> RS 42; Accuracy: 0.859347; F1: 0.765801, latency: 3.094109s
+
+*******************************DEMO COMPLETE*************************************************
+

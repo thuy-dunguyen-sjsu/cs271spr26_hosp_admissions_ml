@@ -26,7 +26,7 @@ def data_enc(filename):
     encoded = np.concatenate(([labels], encoded), axis=0)
 
     try:
-        os.mkdir("./datasets_encoded")
+        os.mkdir("../datasets_encoded")
     except OSError as e:
         pass
 

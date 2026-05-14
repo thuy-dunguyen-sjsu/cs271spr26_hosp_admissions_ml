@@ -1,15 +1,18 @@
-from data_encoder import data_enc
+import sys
+sys.path.insert(0, "./routers")
+
 from main import route_model
 from hp_optimize import route
 import logging
-import sys
 import argparse
+from tqdm.auto import tqdm as tq
+
 
 logger = logging.getLogger("demo")
 logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler("demo.log")
 logger.addHandler(file_handler)
-logger.addHandler(logging.StreamHandler(sys.stdout))
+# logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 def parse():
@@ -32,7 +35,7 @@ def subset():
     # data_enc(filename)
 
     for m in ["lr", "lb", "xgb"]:
-        print(m)
+        tq.write(m)
         params = route(m, filename, iterations, train_size)
         route_model(m, filename, 42, False, params)
 
@@ -45,8 +48,10 @@ def rand_opt():
     random_state = 42
     logger.info("Filename:{}, random_state:{}".format(filename, random_state))
     for m in ["lr", "lb", "xgb"]:
-        print(m)
+        tq.write(m)
         route_model(m, filename, 42, True, None)
+
+    logger.info("*******************************DEMO COMPLETE*************************************************")
 
 
 if __name__ == "__main__":
