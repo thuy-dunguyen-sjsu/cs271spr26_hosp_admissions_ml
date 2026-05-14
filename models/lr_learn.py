@@ -43,17 +43,19 @@ def train_lr(filename='dataset2', optimize=True, random_state=0, params=None):
 
         start = time.perf_counter()
         random_search = RScv(lr_model, param_dist=param_dist)
-        end = time.perf_counter() - start
-
-        start2 = time.perf_counter()
-        random_search.fit(X_train, y_train)
+        random_search.fit(X_train, np.ravel(y_train))
 
         best_params = random_search.best_params_
-        best_model = random_search.best_estimator_
-        end2 = time.perf_counter() - start2
-
+        end = time.perf_counter() - start
+        tqdm.write("LogisticRegression Hyperparameter optimization complete: Latency {:.6f}s".format(end))
         logger.info("LogisticRegression Hyperparameter optimization complete: Latency {:.6f}s".format(end))
 
+        start2 = time.perf_counter()
+        tqdm.write("Modeling with RandomSearch params")
+        logger.info("Modeling with RandomSearch params")
+        best_model = lr(**best_params)
+        best_model.fit(X_train, y_train)
+        end2 = time.perf_counter() - start2
     elif params:
         start2 = time.perf_counter()
         p = "P"
@@ -86,13 +88,13 @@ def train_lr(filename='dataset2', optimize=True, random_state=0, params=None):
     tqdm.write(mess)
     logger.info(mess)
 
-    try:
-        os.mkdir("./params")
-    except OSError as e:
-        pass
-
-    with open("params/" + filename + "_params_lb.txt", "a") as text_file:
-        text_file.write(mess)
+    # try:
+    #     os.mkdir("./params")
+    # except OSError as e:
+    #     pass
+    #
+    # with open("params/" + filename + "_params_lb.txt", "a") as text_file:
+    #     text_file.write(mess)
 
 
 

@@ -11,7 +11,7 @@ def tqdm_scorer(y_true, y_pred):
 def RScv(model, param_dist):
     global pbar
     pbar = tqdm(total=2*counter(param_dist), miniters=1)
-    random_search = RandomizedSearchCV(model, param_distributions=param_dist, n_iter=50, scoring=make_scorer(tqdm_scorer),
+    random_search = RandomizedSearchCV(model, param_distributions=param_dist, n_iter=25, scoring=make_scorer(tqdm_scorer),
                                        random_state=42, cv=2)
     return random_search
 

@@ -24,7 +24,7 @@ def train_lb(filename='dataset2', optimize=True, random_state=0, params=None):
         'n_estimators': [10, 15, 50, 100, 200],
         'learning_rate': [0.01, 0.1, 0.4, 0.7, 1],
         'early_stopping': [True, False],
-        'shrinkage': [0.8, 0.9, 1],
+        'shrinkage': [0.8, 0.9, 1.0],
         # 'kernel': ['linear', 'rbf', 'poly', 'sigmoid']
     }
 
@@ -46,15 +46,20 @@ def train_lb(filename='dataset2', optimize=True, random_state=0, params=None):
         logger.info("Beginning LinearBoost randomized hyperparameter optimization")
         start = time.perf_counter()
         random_search = RScv(lb, param_dist=param_dist)
-        end = time.perf_counter() - start
 
-        start2 = time.perf_counter()
-        random_search.fit(X_train, np.ravel(y_train))
+        random_search.fit(X_train, y_train)
 
         best_params = random_search.best_params_
-        best_model = random_search.best_estimator_
-        end2 = time.perf_counter() - start2
+        end = time.perf_counter() - start
+        tqdm.write("LinearBoost Hyperparameter optimization complete: Latency {:.6f}s".format(end))
         logger.info("LinearBoost Hyperparameter optimization complete: Latency {:.6f}s".format(end))
+
+        start2 = time.perf_counter()
+        tqdm.write("Modeling with RandomSearch params")
+        logger.info("Modeling with RandomSearch params")
+        best_model = lbc(**best_params)
+        best_model.fit(X_train, y_train)
+        end2 = time.perf_counter() - start2
     elif params:
         start2 = time.perf_counter()
         p = "P"
@@ -87,13 +92,13 @@ def train_lb(filename='dataset2', optimize=True, random_state=0, params=None):
     tqdm.write(mess)
     logger.info(mess)
 
-    try:
-        os.mkdir("./params")
-    except OSError as e:
-        pass
-
-    with open("params/" + filename + "_params_lb.txt", "a") as text_file:
-        text_file.write(mess)
+    # try:
+    #     os.mkdir("./params")
+    # except OSError as e:
+    #     pass
+    #
+    # with open("params/" + filename + "_params_lb.txt", "a") as text_file:
+    #     text_file.write(mess)
 
 
 

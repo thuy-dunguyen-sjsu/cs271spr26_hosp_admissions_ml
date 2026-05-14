@@ -34,7 +34,7 @@ def data_enc(filename):
     logger.info(filename + " encoded and saved at" + "datasets_encoded/" + filename + "_encode.csv")
 
 
-def format_data(filename, test_size=None, train_size=None, random_state=None, stratify=None):
+def format_data(filename="dataset3", test_size=None, train_size=None, random_state=None, stratify=None):
     data = np.loadtxt("datasets_encoded/" + filename + "_encode.csv", delimiter=',', skiprows=1)
     labels_data = np.loadtxt("datasets_encoded/" + filename + "_encode.csv", delimiter=',', max_rows=1, dtype=np.object_)
     nrows, ncols = data.shape

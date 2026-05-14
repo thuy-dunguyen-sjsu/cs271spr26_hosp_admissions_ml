@@ -70,13 +70,13 @@ def opt_lr(filename='dataset2', iterations=None, train_size=None):
     mess = "{0}\n\n{1}\n\n".format(json.dumps(param_list, indent=4), json.dumps(param_final, indent=4))
     tqdm.write("Final Parameters with latency {:.6f}s: {}".format(end, json.dumps(param_final, indent=4)))
 
-    try:
-        os.mkdir("./params")
-    except OSError as e:
-        pass
-
-    with open("params/" + filename + "_opt_lr.txt", "w") as text_file:
-        text_file.write(mess)
+    # try:
+    #     os.mkdir("./params")
+    # except OSError as e:
+    #     pass
+    #
+    # with open("params/" + filename + "_opt_lr.txt", "w") as text_file:
+    #     text_file.write(mess)
 
     return param_final
 

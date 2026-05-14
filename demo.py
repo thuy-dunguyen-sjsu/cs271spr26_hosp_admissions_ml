@@ -10,7 +10,7 @@ from tqdm.auto import tqdm as tq
 
 logger = logging.getLogger("demo")
 logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler("demo.log")
+file_handler = logging.FileHandler("params/demo.log")
 logger.addHandler(file_handler)
 # logger.addHandler(logging.StreamHandler(sys.stdout))
 

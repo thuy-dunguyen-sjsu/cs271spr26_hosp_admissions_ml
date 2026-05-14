@@ -7,4 +7,6 @@ params/
 predictions/
 hyperp_opt/__pycache__/
 xgb_test.py
+README.Docker.md
+.dockerignore
 

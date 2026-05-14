@@ -24,7 +24,7 @@ def opt_lb(filename='dataset2', iterations=None, train_size=None):
         'n_estimators': [10, 15, 50, 100, 200],
         'learning_rate': [0.01, 0.1, 0.4, 0.7, 1],
         'early_stopping': [True, False],
-        'shrinkage': [0.8, 0.9, 1],
+        'shrinkage': [0.8, 0.9, 1.0],
         # 'kernel': ['linear', 'rbf', 'poly', 'sigmoid']
     }
 
@@ -53,7 +53,7 @@ def opt_lb(filename='dataset2', iterations=None, train_size=None):
         labels, X_train, X_test, y_train, y_test = format_data(filename, test_size=train_size,
                                                                train_size=train_size, stratify=True)
         random_search = RScv(lb, param_dist=param_dist)
-        random_search.fit(X_train, np.ravel(y_train))
+        random_search.fit(X_train, y_train)
         best_params = random_search.best_params_
         for (k, v) in best_params.items():
             param_list[k].append(v)
@@ -74,13 +74,13 @@ def opt_lb(filename='dataset2', iterations=None, train_size=None):
     mess = "{0}\n\n{1}\n\n".format(json.dumps(param_list, indent=4), json.dumps(param_final, indent=4))
     tqdm.write("Final Parameters with latency {:.6f}s: {}".format(end, json.dumps(param_final, indent=4)))
 
-    try:
-        os.mkdir("./params")
-    except OSError as e:
-        pass
-
-    with open("params/" + filename + "_opt_lb.txt", "w") as text_file:
-        text_file.write(mess)
+    # try:
+    #     os.mkdir("./params")
+    # except OSError as e:
+    #     pass
+    #
+    # with open("params/" + filename + "_opt_lb.txt", "w") as text_file:
+    #     text_file.write(mess)
 
     return param_final
 
