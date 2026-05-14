@@ -28,21 +28,11 @@ def train_lb(filename='dataset2', optimize=True, random_state=0, params=None):
         # 'kernel': ['linear', 'rbf', 'poly', 'sigmoid']
     }
 
-    # param_dist = {
-    #     'n_estimators': [50],
-    #     'learning_rate': [0.01],
-    #     'algorithm': ['SAMME.R'],
-    #     'boosting_type': ['adaboost'],
-    #     'early_stopping': [False]
-    # }
-
     lb = lbc()
-
-    # lb.fit(X_train, np.ravel(y_train))
-    # bst = lb.predict(X_test)
 
     if optimize:
         p = "O"
+        tqdm.write("Beginning LinearBoost randomized hyperparameter optimization")
         logger.info("Beginning LinearBoost randomized hyperparameter optimization")
         start = time.perf_counter()
         random_search = RScv(lb, param_dist=param_dist)
@@ -79,11 +69,9 @@ def train_lb(filename='dataset2', optimize=True, random_state=0, params=None):
         best_params = "Defaults"
         end2 = time.perf_counter() - start2
 
-    # bst = best_model.fit(X_train, np.ravel(y_train))
-
     preds = np.round(best_model.predict(X_test))
 
-    np.savetxt("predictions/" + filename + "_preds_lb.csv", preds, delimiter=",")
+    # np.savetxt("predictions/" + filename + "_preds_lb.csv", preds, delimiter=",")
 
     accuracy = accuracy_score(y_test, preds)
     f1 = f1_score(y_test, preds)

@@ -47,7 +47,6 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-RUN python tests/latency.py
-RUN python demo.py
-RUN python demo.py -c
-RUN python tests/noise.py
+CMD python master.py
+
+

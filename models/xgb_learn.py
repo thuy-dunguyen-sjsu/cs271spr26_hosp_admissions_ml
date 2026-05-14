@@ -36,6 +36,7 @@ def train_xgb(filename='dataset2', optimize=True, random_state=0, params=None):
 
     if optimize:
         p = "O"
+        tqdm.write("Beginning LinearBoost randomized hyperparameter optimization")
         logger.info("Beginning xgboost randomized hyperparameter optimization")
         start = time.perf_counter()
         random_search = RScv(xgb_model, param_dist=param_dist)
@@ -71,11 +72,9 @@ def train_xgb(filename='dataset2', optimize=True, random_state=0, params=None):
         best_params = "Defaults"
         end2 = time.perf_counter() - start2
 
-    # bst = best_model.fit(X_train, y_train)
-
     preds = np.round(best_model.predict(X_test))
 
-    np.savetxt("predictions/" + filename + "_preds_xgb.csv", preds, delimiter=",")
+    # np.savetxt("predictions/" + filename + "_preds_xgb.csv", preds, delimiter=",")
 
     accuracy = accuracy_score(y_test, preds)
     f1 = f1_score(y_test, preds)
@@ -92,12 +91,4 @@ def train_xgb(filename='dataset2', optimize=True, random_state=0, params=None):
     # with open("params/" + filename + "_params_lb.txt", "a") as text_file:
     #     text_file.write(mess)
 
-
-    # # Uses Shap to analyze the models algorithm for weighing features
-    # explainer = shap.Explainer(bst.predict, X_train)
-    # shap_values = explainer(X_train, max_evals=2000)
-    # shap.plots.beeswarm(shap_values)
-
-    # accuracy = best_model.score(X_test, y_test)
-    # print(f"Accuracy on test set: {accuracy:.2f}")
 

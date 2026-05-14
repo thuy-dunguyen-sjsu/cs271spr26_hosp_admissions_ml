@@ -39,6 +39,7 @@ def train_lr(filename='dataset2', optimize=True, random_state=0, params=None):
 
     if optimize:
         p = "O"
+        tqdm.write("Beginning LogisticRegression randomized hyperparameter optimization")
         logger.info("Beginning LogisticRegression randomized hyperparameter optimization")
 
         start = time.perf_counter()
@@ -79,7 +80,7 @@ def train_lr(filename='dataset2', optimize=True, random_state=0, params=None):
 
     preds = np.round(best_model.predict(X_test))
 
-    np.savetxt("predictions/" + filename + "_preds_lr.csv", preds, delimiter=",")
+    # np.savetxt("predictions/" + filename + "_preds_lr.csv", preds, delimiter=",")
 
     accuracy = accuracy_score(y_test, preds)
     f1 = f1_score(y_test, preds)

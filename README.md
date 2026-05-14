@@ -1,7 +1,9 @@
 # Machine Learning Models in Hospital Admission Predictions
 
 ## Running the machine learning algorithms
-Run ```main.py alg dataset random_state --o```
-
+Run ```docker compose up --build``` to build a docker container and run the following:
+- Latency Comparison Test
+- Noise Test for Robustness
+- Optimization Demonstration
 
 ## Formatting the data
