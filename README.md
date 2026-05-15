@@ -23,6 +23,6 @@ To run individual tests, run the following form the root of the project folder:
 | Optimization  | python tests/demo.py    | -c for complete dataset optimization |
 | Shap analysis | python shappy.py        |                                      |
 
-
+Shap is a feature analysis tool for machine learning models. Beeswarm plots are saved in figures/
 
 
