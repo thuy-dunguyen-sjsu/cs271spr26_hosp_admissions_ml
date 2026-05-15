@@ -15,7 +15,7 @@ mp = {
         'shrinkage': [0.8, 0.9, 1.0],
         # 'kernel': ['linear', 'rbf', 'poly', 'sigmoid']
         },
-    "xbg": {
+    "xgb": {
         'eta': [0.01, 0.1, 0.3, 0.7, 1],
         'max_depth': [3, 6, 8, 10, 15, 20],
         # 'colsample_bylevel': [0.01, 0.1, 0.3, 0.6, 0.8, 1.0],

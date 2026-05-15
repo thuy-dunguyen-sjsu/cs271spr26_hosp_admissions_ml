@@ -1,7 +1,7 @@
 # Machine Learning Models in Hospital Admission Predictions
 
 
-##Requirements
+## Requirements
 Docker Compose
 
 ## Running the machine learning algorithms
