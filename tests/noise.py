@@ -1,6 +1,7 @@
 import numpy as np
 import sys
 sys.path.insert(0, "./routers")
+sys.path.insert(0, "./models")
 import logging
 import xgboost as xgb
 from linearboost import LinearBoostClassifier as lbc
@@ -8,7 +9,7 @@ from sklearn.linear_model import LogisticRegression as lr
 from data_encoder import format_data
 import json
 from sklearn.metrics import accuracy_score, f1_score
-
+from model_params import op_p
 
 logger = logging.getLogger("noise")
 logger.setLevel(logging.INFO)
@@ -22,9 +23,9 @@ noise = [5, 10, 20]
 def test(noise):
     logger.info("**********************************Begin Noise Test*****************************")
     # lr_params = {'solver': 'liblinear', 'max_iter': 10, 'l1_ratio': 1.0, 'fit_intercept': False, 'C': 6.309573444801943}
-    lr_params = {"l1_ratio": 1.0, "fit_intercept": True, "C": 3077.880422323208, "solver": "liblinear", "max_iter": 45}
-    lb_params = {'shrinkage': 0.9, 'n_estimators': 50, 'learning_rate': 0.1, 'early_stopping': True}
-    xgb_params = {'objective': 'binary:logistic', 'max_depth': 6, 'eval_metric': 'rmse', 'eta': 0.1, 'colsample_bytree': 1.0}
+    lr_params = op_p["lr"]
+    lb_params = op_p["lb"]
+    xgb_params = op_p["xgb"]
     lr_model = lr(**lr_params)
     xgb_model = xgb.XGBClassifier(**xgb_params)
     lb_model = lbc(**lb_params)

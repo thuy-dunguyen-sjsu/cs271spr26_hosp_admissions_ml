@@ -11,6 +11,7 @@ import logging
 from progress import RScv
 from tqdm.auto import tqdm
 import time
+from model_params import mp
 
 logger = logging.getLogger("demo")
 warnings.filterwarnings('ignore')
@@ -21,16 +22,7 @@ def train_xgb(filename='dataset2', optimize=True, random_state=0, params=None):
     logger.info("Begin training XGBoost model on dataset")
     labels, X_train, X_test, y_train, y_test = format_data(filename, random_state=random_state)
     #
-    param_dist = {
-        'eta': [0.01, 0.1, 0.3, 0.7, 1],
-        'max_depth': [3, 6, 8, 10, 15, 20],
-        # 'colsample_bylevel': [0.01, 0.1, 0.3, 0.6, 0.8, 1.0],
-        'colsample_bytree': [0.01, 0.1, 0.3, 0.6, 0.8, 1.0],
-        # 'eval_metric': ['auc'],
-        # 'objective': ["binary:logistic"]
-        'eval_metric': ['rmse', "auc"],
-        'objective': ["reg:squarederror", "binary:logistic"]
-    }
+    param_dist = mp["xgb"]
 
     xgb_model = xgb.XGBClassifier()
 

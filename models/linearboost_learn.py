@@ -11,6 +11,7 @@ import os
 from progress import  RScv
 from tqdm.auto import tqdm
 import time
+from model_params import mp
 
 logger = logging.getLogger("demo")
 warnings.filterwarnings('ignore')
@@ -20,14 +21,7 @@ def train_lb(filename='dataset2', optimize=True, random_state=0, params=None):
     tqdm.write("Begin training LinearBoost model on dataset")
     logger.info("Begin training LinearBoost model on dataset")
     labels, X_train, X_test, y_train, y_test = format_data(filename, random_state=random_state)
-    param_dist = {
-        'n_estimators': [10, 15, 50, 100, 200],
-        'learning_rate': [0.01, 0.1, 0.4, 0.7, 1],
-        'early_stopping': [True, False],
-        'shrinkage': [0.8, 0.9, 1.0],
-        # 'kernel': ['linear', 'rbf', 'poly', 'sigmoid']
-    }
-
+    param_dist = mp["lb"]
     lb = lbc()
 
     if optimize:

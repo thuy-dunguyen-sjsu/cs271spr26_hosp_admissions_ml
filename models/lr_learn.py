@@ -11,6 +11,7 @@ import os
 from progress import RScv
 from tqdm.auto import tqdm
 import time
+from model_params import mp
 
 logger = logging.getLogger("demo")
 warnings.filterwarnings('ignore')
@@ -21,19 +22,7 @@ def train_lr(filename='dataset2', optimize=True, random_state=0, params=None):
     logger.info("Begin training LogisticRegression model on dataset")
     labels, X_train, X_test, y_train, y_test = format_data(filename, random_state=random_state)
 
-    # param_dist = {'copy_X': [True, False],
-    #               'fit_intercept': [True, False],
-    #               'n_jobs': [1, 5, 10, 15, None],
-    #               'positive': [True, False]
-    #               }
-
-    param_dist = {
-        'l1_ratio': [1.0],
-        'fit_intercept': [True, False],
-        'C': np.logspace(-4,4,6).tolist(),
-        'solver': ['liblinear'],
-        'max_iter': [10, 50, 100]
-    }
+    param_dist = mp["lr"]
 
     lr_model = lr()
 
